@@ -1,0 +1,161 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    background: black;
+    flex-direction: column;
+}
+
+/* Logo */
+.logo {
+    width: 40%;
+    position: absolute;
+    top: 140%;
+    left: 30%;
+    opacity: 0.8;
+}
+
+/* 文字 */
+.title,
+.title2,
+.title3,
+.title4 {
+    font-size: 120px;
+    letter-spacing: 3px;
+    color: rgb(15, 15, 15);
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* title1  title2 為上層，  title3  title4 為底層 */
+.title_Fr,
+.title_Fr2 {
+    position: relative;
+}
+
+.title1,
+.title3 {
+    font-weight: bold;
+}
+
+.title3 {
+    position: absolute;
+    z-index: -1;
+    top: 2%;
+    left: 0.4%;
+}
+
+.title2 {
+    white-space: nowrap;
+}
+
+.title4 {
+    position: absolute;
+    z-index: -1;
+    top: 1%;
+    left: 0.5%;
+    width: 100%;
+}
+
+.title4::after {
+    white-space: nowrap
+}
+
+.title2,
+.title4 {
+    font-size: 80px;
+    font-style: italic;
+    margin: 30px 0px 50px 0px;
+}
+
+.title::after,
+.title2::after {
+    content: attr(data-spotlight);
+    color: transparent;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation: spotlight 5s infinite;
+    background-image: url(./image/colorful2.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-style: inherit;
+}
+
+.title3::after,
+.title4::after {
+    content: attr(data-spotlight2);
+    color: transparent;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation: spotlight2 5s infinite;
+    background-image: url(./image/colorful2.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-style: inherit;
+}
+
+/* 文字動畫特效 */
+@keyframes spotlight {
+
+    0% {
+        clip-path: ellipse(80px 80px at -10% 50%);
+        -webkit-clip-path: ellipse(80px 80px at -10% 50%);
+    }
+
+    50% {
+        clip-path: ellipse(80px 80px at 110% 50%);
+        -webkit-clip-path: ellipse(80px 80px at 110% 50%);
+    }
+
+    100% {
+        clip-path: ellipse(80px 80px at -10% 50%);
+        -webkit-clip-path: ellipse(80px 80px at -10% 50%);
+    }
+}
+
+@keyframes spotlight2 {
+
+    0% {
+        clip-path: ellipse(80px 80px at 110% 50%);
+        -webkit-clip-path: ellipse(80px 80px at 110% 50%);
+    }
+
+    50% {
+        clip-path: ellipse(80px 80px at 50% 50%);
+        -webkit-clip-path: ellipse(80px 80px at -10% 50%);
+    }
+
+    100% {
+        clip-path: ellipse(80px 80px at 110% 50%);
+        -webkit-clip-path: ellipse(80px 80px at 110% 50%);
+    }
+
+}
+
+@media screen and (min-width:1920px) {
+
+    .title,
+    .title3 {
+        font-size: 1000%;
+    }
+
+    .title2,
+    .title4 {
+        font-size: 900%;
+    }
+
+    .title4 {
+        top: 2%;
+
+    }
+}
