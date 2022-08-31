@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuckyDog影城</title>
+    <link rel="stylesheet" href="../login/login.css">
+</head>
+
+<body>
+
+    <div id="loginSection">
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="conta">
+            <div class="form">
+                <p>登入</p>
+                <form method="post" action="/login">
+                    <div class="inputBox">
+                        <input type="text" placeholder="帳號" name="userName" value=""/>
+                        <!-- <input type="text" placeholder="帳號" name="userName" value="<%= userName_Session %>"/> -->
+
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" placeholder="密碼" name="password" />
+                        
+                    </div>
+                    <div class="inputBox">
+                        <button type="submit">登入</button>
+
+                    </div>
+                    <p class="forget">沒有帳號？<a href="#">
+                            註冊
+                        </a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // alert('<%= mistake %>');
+    </script>
+</body>
+
+</html>
